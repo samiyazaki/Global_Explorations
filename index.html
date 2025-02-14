@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Fleet Event Generator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Fleet Event Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Space Fleet Event Generator</h1>
-    <div id="groupInputs">
-      <h2>Add Groups</h2>
-      <button onclick="addGroup()">Add Group</button>
+
+    <div class="container">
+        <header>
+            <h1>Space Fleet Event Generator</h1>
+            <button id="generateEventBtn">Generate Random Event</button>
+        </header>
+
+        <div id="eventDisplay" class="event-box">
+            <h2>Click the button to generate a random event</h2>
+        </div>
     </div>
-    <button id="generateEventBtn">Generate Random Event</button>
-    <div id="eventDisplay"></div>
-    <table id="resultsTable">
-      <thead>
-        <tr>
-          <th>Group</th>
-          <th>Alien Attack Points</th>
-          <th>Resource-Rich Asteroid Points</th>
-          <th>Neighboring Planet Discovered Points</th>
-          <th>Uncharted Lands Points</th>
-          <th>Total Points</th>
-        </tr>
-      </thead>
-      <tbody id="resultsBody"></tbody>
-    </table>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
