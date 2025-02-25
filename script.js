@@ -11,19 +11,18 @@ const events = [
       }
   }
   
-// Generate a random event and display its modifier
 document.getElementById('generateEventBtn').addEventListener('click', () => {
   const randomEvent = events[Math.floor(Math.random() * events.length)];
   
- document.getElementById('eventDisplay').innerHTML = `
-   <h2>Event: ${randomEvent.name}</h2>
-   <p>${randomEvent.prompt}</p>
-   <h3>Modifiers:</h3>
-   <ul>
-     <li><strong>Defense:</strong> ${randomEvent.modifiers.defense}</li>
-     <li><strong>Trade:</strong> ${randomEvent.modifiers.trade}</li>
-     <li><strong>Exlporation:</strong> ${randomEvent.modifiers.exploration}</li>
-     <li><strong>mining:</strong> ${randomEvent.modifiers.mining}</li>
+  document.getElementById('eventDisplay').innerHTML = `
+    <h2>Event: ${randomEvent.name}</h2>
+    <p>${randomEvent.prompt}</p>
+    <h3>Modifiers:</h3>
+    <ul>
+      <li><strong>Defense:</strong> ${randomEvent.modifiers.defense}</li>
+      <li><strong>Trade:</strong> ${randomEvent.modifiers.trade}</li>
+      <li><strong>Exploration:</strong> ${randomEvent.modifiers.exploration}</li>
+      <li><strong>Mining:</strong> ${randomEvent.modifiers.mining}</li>
     </ul>
   `;
 });
