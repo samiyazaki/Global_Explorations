@@ -1,3 +1,9 @@
+const sounds = {
+  klaxon: new Audio("sounds/klaxon.mp3"),
+  beep: new Audio("sounds/beep.mp3"),
+  explosion: new Audio("sounds/explosion.mp3")
+};
+
 // List of 30 unique events with modifiers for all ship types
 const events = [
   { 
@@ -222,11 +228,25 @@ const events = [
   }
 ];
 
+// Function to play a sound effect
+function playSound() {
+  const soundKeys = Object.keys(sounds);
+  const randomSound = soundKeys[Math.floor(Math.random() * soundkeys.length)};
+sounds [randomSound].play();
+}
+
 // Generate a random event and display its modifiers
 document.getElementById('generateEventBtn').addEventListener('click', () => {
+  playSound();
   const randomEvent = events[Math.floor(Math.random() * events.length)];
+  const eventDisplay = document.getElementById('eventDisplay');
+
+  // Apply fade-in animation
+  eventDisplay.classList.remove("fade-in");
+  void eventDisplay.offsetWidth;
+  eventDisplay.classList.add("fade-in");
   
-  document.getElementById('eventDisplay').innerHTML = `
+  eventDisplay.innerHTML = `
     <h2>Event: ${randomEvent.name}</h2>
     <p>${randomEvent.prompt}</p>
     <h3>Modifiers:</h3>
