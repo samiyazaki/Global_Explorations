@@ -31,14 +31,24 @@ body {
     overflow: hidden;
 }
 
-/* Header Image Styling */
-.header-image {
-    width: 100vw; /* Make it full width of the viewport */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center it */
+/* Header Styling */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Optional: Ensures a smooth transition into the page */
+    overflow: hidden;
 }
 
+/* Header Image Styling - Ensures Full Display */
+.header-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Prevents cropping */
+}
 
 h1 {
     color: #39c5e6;
