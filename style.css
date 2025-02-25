@@ -31,14 +31,14 @@ body {
     overflow: hidden;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background: rgba(20, 20, 40, 0.9);
-    padding: 10px;
-    border-bottom: 2px solid #39c5e6;
-    z-index: 10;
+/* Header Image Styling */
+.header-image {
+    width: 100vw; /* Make it full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center it */
 }
+
 
 h1 {
     color: #39c5e6;
