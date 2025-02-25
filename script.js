@@ -231,7 +231,7 @@ const events = [
 // Function to play a sound effect
 function playSound() {
   const soundKeys = Object.keys(sounds);
-  const randomSound = soundKeys[Math.floor(Math.random() * soundkeys.length)};
+  const randomSound = soundKeys[Math.floor(Math.random() * soundKeys.length)];
 sounds [randomSound].play();
 }
 
