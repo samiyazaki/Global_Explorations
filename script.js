@@ -112,21 +112,27 @@ const events = [
   }
 ];
 
-
 // Generate a random event and display its modifiers
 document.getElementById('generateEventBtn').addEventListener('click', () => {
   const randomEvent = events[Math.floor(Math.random() * events.length)];
   
+  // Ensure the keys exist before displaying (prevents 'undefined' issues)
+  const defense = randomEvent.modifiers?.Defense ?? 0;
+  const trade = randomEvent.modifiers?.Trade ?? 0;
+  const exploration = randomEvent.modifiers?.Exploration ?? 0;
+  const mining = randomEvent.modifiers?.Mining ?? 0;
+
   document.getElementById('eventDisplay').innerHTML = `
     <h2>Event: ${randomEvent.name}</h2>
     <p>${randomEvent.prompt}</p>
     <h3>Modifiers:</h3>
     <ul>
-      <li><strong>Defense:</strong> ${randomEvent.modifiers.Defense}</li>
-      <li><strong>Trade:</strong> ${randomEvent.modifiers.Trade}</li>
-      <li><strong>Exploration:</strong> ${randomEvent.modifiers.Exploration}</li>
-      <li><strong>Mining:</strong> ${randomEvent.modifiers.Mining}</li>
+      <li><strong>Defense:</strong> ${defense}</li>
+      <li><strong>Trade:</strong> ${trade}</li>
+      <li><strong>Exploration:</strong> ${exploration}</li>
+      <li><strong>Mining:</strong> ${mining}</li>
     </ul>
   `;
 });
+
 
