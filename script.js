@@ -129,3 +129,4 @@ document.getElementById('generateEventBtn').addEventListener('click', () => {
     </ul>
   `;
 });
+
