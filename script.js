@@ -112,15 +112,22 @@ const events = [
   }
 ];
 
-// Generate a random event and display its modifiers
 document.getElementById('generateEventBtn').addEventListener('click', () => {
   const randomEvent = events[Math.floor(Math.random() * events.length)];
-  
+
+  // Debugging log to check if event is selected correctly
+  console.log("Selected Event:", randomEvent);
+
+  // Debugging log to check if modifiers exist
+  console.log("Modifiers Object:", randomEvent.modifiers);
+
   // Ensure the keys exist before displaying (prevents 'undefined' issues)
-  const defense = randomEvent.modifiers?.Defense ?? 0;
-  const trade = randomEvent.modifiers?.Trade ?? 0;
-  const exploration = randomEvent.modifiers?.Exploration ?? 0;
-  const mining = randomEvent.modifiers?.Mining ?? 0;
+  const defense = randomEvent.modifiers && "Defense" in randomEvent.modifiers ? randomEvent.modifiers.Defense : 0;
+  const trade = randomEvent.modifiers && "Trade" in randomEvent.modifiers ? randomEvent.modifiers.Trade : 0;
+  const exploration = randomEvent.modifiers && "Exploration" in randomEvent.modifiers ? randomEvent.modifiers.Exploration : 0;
+  const mining = randomEvent.modifiers && "Mining" in randomEvent.modifiers ? randomEvent.modifiers.Mining : 0;
+
+  console.log("Extracted Modifiers:", { defense, trade, exploration, mining });
 
   document.getElementById('eventDisplay').innerHTML = `
     <h2>Event: ${randomEvent.name}</h2>
@@ -134,5 +141,4 @@ document.getElementById('generateEventBtn').addEventListener('click', () => {
     </ul>
   `;
 });
-
 
