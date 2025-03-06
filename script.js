@@ -1,105 +1,111 @@
 // List of 30 unique events with modifiers for all ship types
 const events = [
-  { 
-    name: "Intergalactic Trade Coalition Formed",
-    prompt: "A historic trade agreement unites multiple civilizations, drastically increasing commerce and resource sharing.",
-    modifiers: { Defense: -10, Trade: 50, Exploration: 10, Mining: 15 }
+   { 
+    name: 'Trade Boom',
+    prompt: "The intergalactic economy is thriving, making trade routes highly profitable.",
+    modifiers: { Defense: -5, Trade: 30, Exploration: 10, Mining: 10 }
   },
   { 
-    name: "Universal Economic Pooling",
-    prompt: "Major economies pool their resources to stabilize interstellar markets. Trade ships thrive while other sectors adjust.",
-    modifiers: { Defense: -5, Trade: 45, Exploration: 5, Mining: 10 }
+    name: 'Asteroid Strike',
+    prompt: "A massive asteroid has struck a mining colony! Mining ships are required for repairs.",
+    modifiers: { Defense: 10, Trade: -10, Exploration: 5, Mining: -15 }
   },
   { 
-    name: "Galactic Banking Boom",
-    prompt: "A surge in interstellar banking leads to increased investments in planetary economies. Those with strong trade fleets benefit the most.",
-    modifiers: { Defense: -5, Trade: 40, Exploration: 0, Mining: 10 }
+    name: 'Solar Flare',
+    prompt: "A powerful solar flare disrupts communications. Defense ships shield critical systems.",
+    modifiers: { Defense: 20, Trade: -5, Exploration: 10, Mining: -10 }
   },
   { 
-    name: "Corporate Mega-Merger",
-    prompt: "A major corporate merger restructures interstellar trade, providing lucrative opportunities for trade-oriented civilizations.",
-    modifiers: { Defense: -10, Trade: 50, Exploration: 10, Mining: 20 }
+    name: 'Black Hole Discovered',
+    prompt: "A newly discovered black hole disrupts space travel. Exploration ships assist navigation.",
+    modifiers: { Defense: 0, Trade: -10, Exploration: 25, Mining: -5 }
   },
   { 
-    name: "Intergalactic Stock Market Crash",
-    prompt: "A speculative market collapse sends shockwaves through the galactic economy, hitting trade routes and financial investments hard.",
-    modifiers: { Defense: 5, Trade: -40, Exploration: -20, Mining: 15 }
+    name: 'Pirate Raid!',
+    prompt: "Pirates are attacking your trade convoys! Defense ships are needed for protection.",
+    modifiers: { Defense: 25, Trade: -20, Exploration: -5, Mining: 0 }
   },
   { 
-    name: "Banking Reform & Stabilization",
-    prompt: "New financial regulations stabilize the galactic economy, boosting trade and investment in planetary infrastructures.",
-    modifiers: { Defense: 0, Trade: 35, Exploration: 15, Mining: 10 }
+    name: 'Mysterious Signal Detected',
+    prompt: "A strange signal has been detected from deep space. Exploration ships investigate.",
+    modifiers: { Defense: 5, Trade: 0, Exploration: 30, Mining: 0 }
   },
   { 
-    name: "Trade Route Expansion",
-    prompt: "A breakthrough in hyperspace lane mapping opens new profitable trade routes, benefiting trade and exploration.",
-    modifiers: { Defense: -5, Trade: 40, Exploration: 20, Mining: 5 }
+    name: 'Wormhole Appears',
+    prompt: "A wormhole has opened near your system. Exploration ships can scout new routes.",
+    modifiers: { Defense: 5, Trade: 10, Exploration: 25, Mining: 10 }
   },
   { 
-    name: "Galactic Peace Treaty Signed",
-    prompt: "After years of tension, warring civilizations agree to an unprecedented peace treaty, significantly reducing military spending and boosting trade.",
-    modifiers: { Defense: -30, Trade: 50, Exploration: 10, Mining: 5 }
+    name: 'Meteor Shower',
+    prompt: "A meteor shower threatens mining operations. Defense ships shield against damage.",
+    modifiers: { Defense: 15, Trade: 0, Exploration: -5, Mining: -15 }
   },
   { 
-    name: "Centralized Space Banking System",
-    prompt: "A new centralized space banking system makes transactions more efficient, benefiting trade while reducing security concerns.",
-    modifiers: { Defense: -10, Trade: 45, Exploration: 5, Mining: 10 }
+    name: 'Refugee Crisis',
+    prompt: "A neighboring planet is in distress. Trade ships deliver emergency supplies.",
+    modifiers: { Defense: 10, Trade: 25, Exploration: 10, Mining: 5 }
   },
   { 
-    name: "Luxury Goods Boom",
-    prompt: "An explosion in demand for luxury goods across the galaxy creates massive trade opportunities.",
-    modifiers: { Defense: -5, Trade: 50, Exploration: 5, Mining: 10 }
+    name: 'Ancient Alien Ruins Found',
+    prompt: "An ancient alien structure is discovered on a distant world. Exploration ships analyze the site.",
+    modifiers: { Defense: -5, Trade: 10, Exploration: 30, Mining: 15 }
   },
   { 
-    name: "Planetary Infrastructure Investment",
-    prompt: "A massive wave of infrastructure investment increases demand for trade and mining.",
-    modifiers: { Defense: 0, Trade: 30, Exploration: 5, Mining: 20 }
+    name: 'Rare Mineral Cache',
+    prompt: "A rare mineral deposit has been found in a nearby asteroid field. Mining ships extract it.",
+    modifiers: { Defense: 0, Trade: 10, Exploration: 10, Mining: 30 }
   },
   { 
-    name: "Galactic Free Trade Agreement",
-    prompt: "Major civilizations agree to remove tariffs on intergalactic goods, creating new trade opportunities.",
-    modifiers: { Defense: -5, Trade: 45, Exploration: 10, Mining: 5 }
+    name: 'Diplomatic Dispute',
+    prompt: "A trade dispute between planets threatens economic stability.",
+    modifiers: { Defense: 10, Trade: -25, Exploration: 5, Mining: 10 }
   },
   { 
-    name: "Mining Conglomerates Buy Out Trade Fleets",
-    prompt: "Large mining corporations buy shares in trade companies, increasing resource allocation for interstellar transport.",
-    modifiers: { Defense: -5, Trade: 30, Exploration: 0, Mining: 20 }
+    name: 'Energy Crisis',
+    prompt: "Fuel shortages limit space travel. Mining ships extract alternative energy sources.",
+    modifiers: { Defense: -5, Trade: -10, Exploration: -5, Mining: 25 }
   },
   { 
-    name: "Refugee Crisis Stabilized",
-    prompt: "Massive investments in housing and infrastructure resolve the refugee crisis, strengthening economic activity and trade.",
-    modifiers: { Defense: -10, Trade: 40, Exploration: 5, Mining: 10 }
+    name: 'Stellar Anomaly',
+    prompt: "A powerful gravitational anomaly is detected. Exploration ships study its effects.",
+    modifiers: { Defense: -5, Trade: 5, Exploration: 30, Mining: 0 }
   },
   { 
-    name: "New Economic Hub Established",
-    prompt: "A newly colonized planet emerges as a major financial hub, benefiting trade and exploration.",
-    modifiers: { Defense: -5, Trade: 35, Exploration: 20, Mining: 10 }
+    name: 'Fleet Technology Upgrade',
+    prompt: "A breakthrough in ship technology improves efficiency.",
+    modifiers: { Defense: 10, Trade: 10, Exploration: 10, Mining: 10 }
   },
   { 
-    name: "Universal Digital Currency Adopted",
-    prompt: "A new universal currency allows faster and more efficient trade across civilizations, benefiting commercial sectors.",
-    modifiers: { Defense: -5, Trade: 50, Exploration: 5, Mining: 10 }
+    name: 'Hyperspace Lane Disruption',
+    prompt: "A critical hyperspace lane is blocked. Trade ships are delayed.",
+    modifiers: { Defense: 0, Trade: -15, Exploration: 10, Mining: 0 }
   },
   { 
-    name: "AI Revolution in Logistics",
-    prompt: "AI-powered logistics create a revolution in cargo transport and supply chain management, increasing trade efficiency.",
-    modifiers: { Defense: -5, Trade: 45, Exploration: 10, Mining: 5 }
+    name: 'Galactic Summit Agreement',
+    prompt: "A major diplomatic agreement benefits interstellar trade.",
+    modifiers: { Defense: 0, Trade: 25, Exploration: 10, Mining: 5 }
   },
   { 
-    name: "Mining Technology Breakthrough",
-    prompt: "Advances in asteroid mining tech lead to an increase in valuable minerals being extracted and traded.",
-    modifiers: { Defense: 0, Trade: 30, Exploration: 5, Mining: 30 }
+    name: 'AI Breakthrough',
+    prompt: "Artificial intelligence revolutionizes space mining.",
+    modifiers: { Defense: -5, Trade: 5, Exploration: 10, Mining: 30 }
   },
   { 
-    name: "New Colony Establishes Major Trade Hub",
-    prompt: "A recently settled planet quickly develops into a major hub for interstellar commerce, boosting trade routes.",
-    modifiers: { Defense: -5, Trade: 40, Exploration: 10, Mining: 5 }
+    name: 'Cosmic Radiation Storm',
+    prompt: "A radiation storm threatens all fleets. Defense ships mitigate damage.",
+    modifiers: { Defense: 20, Trade: -10, Exploration: -5, Mining: -5 }
   },
   { 
-    name: "Interplanetary Financial Exchange Launched",
-    prompt: "A new financial exchange allows civilizations to invest in planetary development, benefiting trade and mining sectors.",
-    modifiers: { Defense: -5, Trade: 45, Exploration: 5, Mining: 10 }
+    name: 'Time Dilation Event',
+    prompt: "A strange time anomaly slows ship operations.",
+    modifiers: { Defense: -5, Trade: -10, Exploration: -10, Mining: -10 }
+  },
+  { 
+    name: 'New Planet Colonized',
+    prompt: "A habitable planet is discovered and colonized!",
+    modifiers: { Defense: 10, Trade: 15, Exploration: 25, Mining: 20 }
   }
+
 ];
 
 
